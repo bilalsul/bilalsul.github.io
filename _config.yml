@@ -28,6 +28,7 @@ url: "https://bilalsul.github.io" # the base hostname & protocol for your site, 
 theme: beautiful-jekyll-theme
 plugins:
   - jekyll-feed
+  - jekyll-archives
   - jekyll-sitemap
   - jekyll-seo-tag
 
@@ -64,4 +65,16 @@ defaults:
       permalink: "tags/:tag"
 
 navbar-links:
-  About me: "/about/"
+  About: "/about/"
+  Archive: "/archives/"
+
+jekyll-archives:
+  enabled:
+    - year
+    - month
+  layouts:
+    year: archive
+    month: archive
+  permalinks:
+    year: "/archives/year/:year/"
+    month: "/archives/month/:year-:month/"
